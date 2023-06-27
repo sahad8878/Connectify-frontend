@@ -19,7 +19,6 @@ function ClosestPerson({ handleOpenModal }) {
         setNeibors(response.data.city);
       });
   }, [userToken]);
-  console.log(neibors.length,"neibors");
   return (
     <div className="shadow-r-black">
       <h1 className="text-center text-2xl text-[#0e2d39] font-bold font-sans p-8  ">
