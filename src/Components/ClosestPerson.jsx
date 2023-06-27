@@ -53,7 +53,7 @@ function ClosestPerson({ handleOpenModal }) {
             </div>
           ))}
         </div> :
-        <div className="text-center text-xl  font-medium text-white">Your neighbors have not registered yet..!</div>
+        <div className="text-center text-xl pb-14 font-medium text-white">Your neighbors have not registered yet..!</div>
           }
         </div>
       ) : (
