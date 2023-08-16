@@ -53,7 +53,7 @@ function Profile() {
         </div>
       </div>
 
-      <div className="flex sm:flex-row flex-col bg-[#ffcc05] md:min-h-[310px]  ">
+      <div className="flex sm:flex-row flex-col bg-[#FFC1AC] md:min-h-[310px]  ">
         <div className=" md:w-[50%] shadow-2xl   ">
           <ClosestPerson handleOpenModal={handleOpenModal} />
         </div>

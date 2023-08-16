@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useGetUserDetailsQuery } from "../Features/Auth/authService";
 import { logout, setCredentials } from "../Features/Auth/authSlice";
-import logo from "../Assets/logoHeader.png";
 import axios from "../Axios/Axios";
 
 function Header() {
@@ -39,11 +38,12 @@ function Header() {
       });
   };
   return (
-    <div className="h-20 bg-[#0e2d39]  flex justify-between ">
-      <div>
-        <img src={logo} className="h-9 m-6 md:mx-16 " alt="logo" />
+    <div className="h-20  bg-[#FFECE6] flex justify-between ">
+      <div className="flex">
+        <span className="h-9 m-6 md:mx-16 font-bold font-serif text-3xl text-[#FFC1AC] ">Connectify</span>
+        
       </div>
-      <div className="text-white">
+      <div className="text-[#0e2d39]">
         <div className="font-serif flex  font-medium uppercase text-base p-9 md:mr-28">
           <div>
             {userInfo ? (

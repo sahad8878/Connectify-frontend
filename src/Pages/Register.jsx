@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../Features/Auth/authActions";
 import { useNavigate, NavLink } from "react-router-dom";
-import logImg from "../Assets/vote.png";
+
 function Register() {
   const { loading, userInfo, error, success } = useSelector(
     (state) => state.auth
@@ -27,9 +27,6 @@ function Register() {
   return (
     <div className="text-center flex justify-center content-center">
       <div className="shadow-lg shadow-[#0e2d39]  border-2 rounded-2xl  my-16 p-14 ">
-        <div className="flex justify-center content-center">
-          <img src={logImg} className="h-28" alt="" />
-        </div>
         <h1 className="text-xl font-bold font-serif text-[#0e2d39] ">
           Register Here..
         </h1>
@@ -42,10 +39,14 @@ function Register() {
             <input
               type="text"
               className="form-input rounded-sm border-[#0e2d39] border-2"
-              {...register("firstName", { required: true,maxLength:50 ,pattern:{
-                value: /^[a-zA-Z\s]*$/,
-                message: "Invalid first name"
-              }})}
+              {...register("firstName", {
+                required: true,
+                maxLength: 50,
+                pattern: {
+                  value: /^[a-zA-Z\s]*$/,
+                  message: "Invalid first name",
+                },
+              })}
             />
             {errors.firstName && (
               <p className="errorMsg text-red-600">
@@ -60,10 +61,14 @@ function Register() {
             <input
               type="text"
               className="form-input rounded-sm border-[#0e2d39] border-2"
-              {...register("lastName", { required: true,maxLength:50,pattern:{
-                value: /^[a-zA-Z\s]*$/,
-                message: "Invalid last name"
-              } })}
+              {...register("lastName", {
+                required: true,
+                maxLength: 50,
+                pattern: {
+                  value: /^[a-zA-Z\s]*$/,
+                  message: "Invalid last name",
+                },
+              })}
             />
             {errors.lastName && (
               <p className="errorMsg text-red-600">

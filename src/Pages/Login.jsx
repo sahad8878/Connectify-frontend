@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import { useDispatch, useSelector } from "react-redux";
-import logImg from "../Assets/vote.png";
 import axios from "../Axios/Axios";
 import { message } from "antd";
 import { GoogleLogin } from "@react-oauth/google";
@@ -25,7 +24,6 @@ function Login() {
   }, [navigate, userInfo]);
 
   const submitForm = (data) => {
-
     dispatch(userLogin(data));
   };
   const handelGoogleSignIn = async (response) => {
@@ -48,13 +46,9 @@ function Login() {
   return (
     <div className="text-center flex justify-center content-center">
       <div className="shadow-lg shadow-[#0e2d39]  border-2 rounded-2xl  my-16 p-14 ">
-        <div className="flex justify-center content-center">
-          <img src={logImg} className="h-28" alt="" />
-        </div>
         <h1 className="text-xl font-bold font-serif text-[#0e2d39] ">
           Login Here..
         </h1>
-
         <form onSubmit={handleSubmit(submitForm)} className="">
           <div className="form-group  text-left mt-4 flex flex-col">
             <label className="text-left font-semibold " htmlFor="email">

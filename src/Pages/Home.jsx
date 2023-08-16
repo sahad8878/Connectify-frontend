@@ -1,5 +1,5 @@
 import React from "react";
-import masterImg from "../Assets/master.png";
+import masterImg from "../Assets/connectify.avif";
 import { NavLink } from "react-router-dom";
 function Home() {
   return (
